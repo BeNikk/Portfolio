@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Sidebar, SidebarBody } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
-import { MenuItem } from "@/components/ui/navbar-menu";
+import { ThemeProvider } from "next-themes";
+import {MobileSidebar, Sidebar} from "@/components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +19,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body className={cn(inter.className)}>
-       
+        <div className="hidden lg:block">
+          <Sidebar/>
+        </div>
+        <div className="block lg:hidden">
+          <MobileSidebar/>
+        </div>
+        <main className="lg:pl-60 rounded-lg  lg:pt-16">
         {children}
+        </main>
         </body>
     </html>
   );
