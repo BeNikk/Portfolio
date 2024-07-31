@@ -1,3 +1,4 @@
+"use client";
 import {
     Sheet,
     SheetContent,
@@ -8,6 +9,8 @@ import {
   } from "@/components/ui/sheet"
 import SidebarItems from "./SidebarItems";
 import Image from "next/image";
+import { motion } from "framer-motion"
+import { useState } from "react";
   
 
 export const Sidebar = () => {
@@ -22,18 +25,30 @@ export const Sidebar = () => {
      );
 }
  
-export const MobileSidebar=()=>{
-    return(
+
+export const MobileSidebar = () => {
+    const variants = {
+        hidden: { x: '-100%', opacity: 0 },
+        visible: { x: 0, opacity: 1 },
+        exit: { x: '-100%', opacity: 0 },
+    };
+
+    return (
         <div>
             <Sheet>
-
-            <SheetTrigger><Image src={'/menu.jpg'}  alt="menu" width={64} height={64} className="text-black"/></SheetTrigger>
-            <SheetContent side={'left'} className="bg-[#F3F4F6] w-60">
-            <SidebarItems/>
-            </SheetContent>
+                <SheetTrigger>
+                    <Image
+                        src={'/menu.jpg'}
+                        alt="menu"
+                        width={64}
+                        height={64}
+                        className="text-black"
+                    />
+                </SheetTrigger>
+                <SheetContent side={'left'} className="bg-[#F3F4F6] w-60">
+                        <SidebarItems />
+                </SheetContent>
             </Sheet>
-
         </div>
-
-    )
-}
+    );
+};

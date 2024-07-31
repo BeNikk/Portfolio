@@ -2,6 +2,7 @@
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 import Typewriter from 'typewriter-effect'; 
 import { motion } from 'framer-motion';
+import ProjectSection from '@/components/ProjectComponent';
 
 export default function Home() {
   const words = [
@@ -57,13 +58,14 @@ export default function Home() {
           </div>
           <div className='text-slate-500 py-1'>
             <p>
-              Explore my portfolio and feel free to reach out if you're interested in collaboration or have any questions.
+              Explore my portfolio and feel free to reach out if you're interested in collaboration.
             </p>
           </div>
         </motion.div>
         
         <motion.div variants={itemVariants}>
           <h2 className='pt-16 text-xl font-bold text-[#515151]'>What I&apos;ve been working on</h2>
+          <ProjectSection/>
         </motion.div>
       </motion.div>
     </div>
