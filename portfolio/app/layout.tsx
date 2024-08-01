@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
 import {MobileSidebar, Sidebar} from "@/components/Sidebar";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,9 +28,10 @@ export default function RootLayout({
         <div className="block lg:hidden">
           <MobileSidebar/>
         </div>
-        <main className="lg:pl-60 rounded-lg  lg:pt-16">
+        <main className="lg:pl-60 xl:pl-[24rem] rounded-lg  lg:pt-16">
         {children}
         </main>
+        <Footer/>
         </body>
     </html>
   );
