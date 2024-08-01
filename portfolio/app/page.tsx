@@ -31,7 +31,7 @@ export default function Home() {
       opacity: 1, 
       y: 0, 
       transition: { 
-        duration: 0.5,
+        duration: 0.3,
         staggerChildren: 0.3
       } 
     }

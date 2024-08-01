@@ -3,7 +3,6 @@ import { Projects } from "./constants/projects";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 const ProjectSection = () => {
@@ -12,7 +11,7 @@ const ProjectSection = () => {
             {Projects.map((project) => {
                 return (
                     <div key={project.name} className="relative">
-                    <div className=" max-w-[700px] hover:shadow-lg rounded-xl mt-3 flex flex-col sm:flex-row items-start py-8 ">
+                    <div className=" max-w-[700px] hover:shadow-xl  shadow-sm rounded-xl mt-3 flex flex-col sm:flex-row items-start py-8 ">
                         <Link href={project.liveUrl?project.liveUrl:project.githubUrl} className="flex flex-col sm:flex-row" target="_blank">
                         <div className="border-slate-200 rounded-lg w-full max-w-[200px] sm:w-auto">
                             <Image 
@@ -30,7 +29,7 @@ const ProjectSection = () => {
                                 
 
                                 </div>
-                                <p className="text-slate-500 px-4 text-left">{project.description}</p>
+                                <p className=" px-4 text-sm  text-[#023020] text-left">{project.description}</p>
                                 <div className="flex flex-wrap px-4 mt-2">
                                     {project.techStack.map((tech, index) => (
                                         <Badge 

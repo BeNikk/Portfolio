@@ -28,7 +28,7 @@ export default function RootLayout({
         <div className="block lg:hidden">
           <MobileSidebar/>
         </div>
-        <main className="lg:pl-60 xl:pl-[24rem] rounded-lg  lg:pt-16">
+        <main className="lg:pl-60 xl:pl-[24rem] rounded-lg  lg:pt-24">
         {children}
         </main>
         <Footer/>

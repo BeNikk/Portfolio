@@ -15,7 +15,7 @@ import { useState } from "react";
 
 export const Sidebar = () => {
     return ( 
-        <div className="hidden lg:block rounded-lg fixed w-60 bg-[#F3F4F6] h-full">
+        <div className="hidden lg:block rounded-lg fixed w-60 bg-[#F5F5F5] h-full">
         
             <SidebarItems/>
 
@@ -45,7 +45,7 @@ export const MobileSidebar = () => {
                         className="text-black"
                     />
                 </SheetTrigger>
-                <SheetContent side={'left'} className="bg-[#F3F4F6] w-60">
+                <SheetContent side={'left'} className="bg-[#F5F5F5] w-60">
                         <SidebarItems />
                 </SheetContent>
             </Sheet>
