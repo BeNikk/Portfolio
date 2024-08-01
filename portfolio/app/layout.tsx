@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
 import {MobileSidebar, Sidebar} from "@/components/Sidebar";
 import { Footer } from "@/components/Footer";
-
+import {Toaster} from 'react-hot-toast';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={cn(inter.className)}>
+        <Toaster/>
         <div className="hidden lg:block">
           <Sidebar/>
         </div>

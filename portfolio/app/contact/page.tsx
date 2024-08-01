@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const defaultFormState = {
   name: {
@@ -21,19 +22,20 @@ const defaultFormState = {
   const handleSubmit = async(e: any) => {
     e.preventDefault();
     try {
-        const response = await fetch('/contact', {
+        const response = await fetch('/api/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(formData)
         });
-  
-        if (response.status==200) {
-          alert('Email sent successfully!');
-        } else {
-          alert('Failed to send email.');
+        if(response.status==200){
+          toast.success("I will contact you soon");
+        }else{
+          toast.error("something went wrong");
         }
+      
+  
       } catch (error) {
         console.error('Error:', error);
       }

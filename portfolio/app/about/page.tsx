@@ -57,7 +57,7 @@ const AboutPage = () => {
                 <br />
                 <br />
 
-              My passion for tech is kinda like my obsession with Insta trends—constant, relentless, and always hunting for the next big thing. Whether I&apos;m creating something epic or laughing off a coding fail, I&apos;m here for it. If you&apos;re into tech talk, nerdy humor, or just vibing on the latest digital trends, let&apos;s connect!
+              My passion for tech is kinda like my obsession with The Social Network Movie, always hunting for the next big thing. Whether I&apos;m creating something epic or laughing off a coding fail, I&apos;m here for it. If you&apos;re into tech talk, nerdy humor, or just vibing on the latest digital trends, let&apos;s connect!
               <br />
               <br />
               <br />
