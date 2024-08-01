@@ -59,7 +59,7 @@ export default function Home() {
           </div>
           <div className='text-slate-500 py-4'>
             <p>
-              Explore my portfolio and feel free to reach out if you're interested in collaboration.
+              Explore my portfolio and feel free to reach out if you&apos;re interested in collaboration.
             </p>
           </div>
         </motion.div>
