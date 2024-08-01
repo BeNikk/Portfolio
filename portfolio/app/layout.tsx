@@ -23,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={cn(inter.className)}>
+        <Analytics/>
         <Toaster/>
         <div className="hidden lg:block">
           <Sidebar/>
@@ -32,7 +33,6 @@ export default function RootLayout({
         </div>
         <main className="lg:pl-60 xl:pl-[24rem] rounded-lg  lg:pt-24">
         {children}
-        <Analytics/>
         </main>
         <Footer/>
         </body>
