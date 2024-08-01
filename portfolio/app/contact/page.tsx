@@ -55,7 +55,7 @@ const defaultFormState = {
                 </div>
 <div className="pt-8 lg:pt-16">
 
-    <form className="form pl-20 sm:pl-0" onSubmit={handleSubmit}>
+    <form className="form pl-8 sm:pl-0" onSubmit={handleSubmit}>
       <div className="flex flex-col md:flex-row justify-between gap-5">
         <input
           type="text"
