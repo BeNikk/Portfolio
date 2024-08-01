@@ -106,7 +106,7 @@ const defaultFormState = {
         />
       </div>
       <button
-        className="w-full px-2 py-2 mt-4 bg-neutral-100 rounded-md font-bold text-neutral-500"
+        className="w-full px-2 py-2 mt-4 bg-neutral-100 rounded-md font-bold text-neutral-500 mb-4"
         type="submit"
       >
         Submit{" "}
