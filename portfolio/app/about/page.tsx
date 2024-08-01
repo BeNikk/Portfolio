@@ -49,7 +49,7 @@ const AboutPage = () => {
                 
             <div>
                 <p className="text-slate-500 px-4 text-left leading-relaxed">
-                Yo! I'm currently navigating the wild world of full-stack development. When I&apos;m not knee-deep in code or trying to make sense of complex algorithms, I&apos;m all about dreaming up the next big thing and bringing it to life.
+                Yo! I&apos;m currently navigating the wild world of full-stack development. When I&apos;m not knee-deep in code or trying to make sense of complex algorithms, I&apos;m all about dreaming up the next big thing and bringing it to life.
                 <br />
                 <br />
 
