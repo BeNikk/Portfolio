@@ -26,13 +26,17 @@ export const Sidebar = () => {
 }
  
 
+
 export const MobileSidebar = () => {
-    
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOpen = () => setIsOpen(true);
+    const handleClose = () => setIsOpen(false);
 
     return (
         <div>
-            <Sheet>
-                <SheetTrigger>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger onClick={handleOpen}>
                     <Image
                         src={'/menu.jpg'}
                         alt="menu"
@@ -42,7 +46,10 @@ export const MobileSidebar = () => {
                     />
                 </SheetTrigger>
                 <SheetContent side={'left'} className="bg-[#F5F5F5] w-60">
-                        <SidebarItems />
+                    <div onClick={handleClose}>
+
+                        <SidebarItems/>
+                    </div>
                 </SheetContent>
             </Sheet>
         </div>

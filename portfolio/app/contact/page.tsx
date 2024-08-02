@@ -1,4 +1,5 @@
 "use client";
+import { Loader2 } from "lucide-react";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -18,10 +19,13 @@ const defaultFormState = {
 };
  const Contact = () => {
   const [formData, setFormData] = useState(defaultFormState);
+  const [loading,setLoading]=useState(false);
 
   const handleSubmit = async(e: any) => {
     e.preventDefault();
     try {
+      setLoading(true);
+      
         const response = await fetch('/api/contact', {
           method: 'POST',
           headers: {
@@ -37,13 +41,16 @@ const defaultFormState = {
       
   
       } catch (error) {
+        setLoading(false);
         console.error('Error:', error);
+      }finally{
+        setLoading(false);
       }
 
     
   };
   return (
-    <div className="mx-4 px-4 sm:px-8 md:px-20 lg:px-60 flex flex-col justify-center items-start h-full ">
+    <div className="relative mx-4 px-4 sm:px-8 md:px-20 lg:px-60 flex flex-col justify-center items-start h-full ">
         <div className="flex flex-col items-start justify-start">
                 <h1 className="text-2xl lg:text-3xl">✉️</h1>
                 <h1 className="text-2xl lg:text-3xl text-[#515151] font-bold">Contact Me</h1>
@@ -105,13 +112,19 @@ const defaultFormState = {
           }}
         />
       </div>
-      <button
+      <button disabled={loading}
         className="w-full px-2 py-2 mt-4 bg-neutral-100 rounded-md font-bold text-neutral-500 mb-4"
         type="submit"
       >
         Submit{" "}
       </button>
     </form>
+    {loading && (
+      <div className="fixed inset-0 bg-white bg-opacity-80 backdrop-blur-sm z-10 flex items-center justify-center">
+        <Loader2 className="animate-spin "/>
+
+      </div>
+    )}
 </div>
     </div>
 
